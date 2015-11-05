@@ -1,0 +1,12 @@
+
+  <h1 class = "centerdiv">Artists <a href="artists/new"> (+)</a> </h1>
+
+  <ul>
+    <% @artists.each do |artist| %>
+      <li class = "align">
+        <a href="/artists/<%= artist.id %>">
+          <%= artist.name %>
+        </a>
+      </li>
+    <% end %>
+  </ul>
