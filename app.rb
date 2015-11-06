@@ -7,13 +7,13 @@ require 'pry'
 require_relative 'db/connection.rb'
 
 # Load specific routes / controllers
-# [YOUR CODE HERE!]
+# connects to seperate controller to keep things clean
+require_relative 'artists_controller.rb'
 
 # Load models
 require_relative 'models/artist'
 require_relative 'models/song'
 
-####################
-#  General routes  #
-####################
-# [MORE OF YOUR CODE HERE!]
+get "/" do
+erb :"home/index"
+end
