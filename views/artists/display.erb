@@ -1,0 +1,16 @@
+
+<h2 class = "align"><%= @artists.name %>
+  <a href="/artists/<%= @artists.id %>/edit">(edit)</a>
+</h2>
+
+<h3 class="align">Songs</h3>
+<ul>
+  <% @artists.songs.each do |song| %>
+    <li class = "align">
+      <a href="/songs/<%= song.id %>">
+        <%= song.title %> (<%= song.album %>)
+      </a>
+    </li>
+
+  <% end %>
+</ul>
