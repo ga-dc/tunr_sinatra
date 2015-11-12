@@ -1,0 +1,18 @@
+<nav>
+    <li><a href="\">B A C K</a></li>
+</nav>
+<p> <%= @artist_id.name %> </p>
+<img src= <%= @artist_id.photo_url %> />
+<p> <%= @artist_id.nationality %> </p>
+
+<ul>
+<% @artist_id.songs.each do |song|%>
+
+  <a href= <%= song.preview_url %> />
+
+  <li> <%= song.title %> </li>
+
+<% end %>
+</ul>
+<a href="\">Home</a>
+<a href='\artists\<%=@artist%>'>Update Artist</a>
