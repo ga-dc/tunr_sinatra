@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tun.r Artists</title>
+  <style>
+    img {
+      max-width: 50%;
+    }
+    p {
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Peep These Amazing Artists!</h1>
+  <h2>Add an Artist</h2>
+  <form method="post" action="/artists">
+
+    <label>Name:</label> <input type="text" name="name">
+    <label>Photo (URL):</label> <input type="text" name="photo">
+    <label>Nationality:</label> <input type="text" name="nationality">
+    <input type="submit">
+
+  </form>
+
+    <% @artists.each do |artist| %>
+      <p class="artist">
+        <a href="/artists/<%= artist.id %>"> <%= artist.name %> </a>
+      </p>
+      <img src="<%= artist.photo_url %>" alt="artist photos"></img>
+    <% end %>
+
+</body>
+</html>
