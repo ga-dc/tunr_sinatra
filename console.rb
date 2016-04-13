@@ -8,6 +8,8 @@ require_relative 'db/connection'
 require_relative 'models/artist'
 require_relative 'models/song'
 
+
+
 binding.pry
 
 puts "this line fixes binding.pry bug"

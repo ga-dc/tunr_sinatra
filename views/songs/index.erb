@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Songs</h1>
+  <% @songs.each do |song| %>
+  <p class ="songs">
+    <%= song.title %><audio src="<%= song.preview_url%>">
+  </p>
+  <% end %>
+</body>
+</html>
