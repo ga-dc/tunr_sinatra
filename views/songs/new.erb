@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New Song!</title>
+</head>
+<body>
+  <h1>New song!</h1>
+  <form action="/songs/new/" method="post">
+
+  <p>Title: <input type="text" name="song[title]"></p>
+  <p>Album: <input type="text" name="song[album]"></p>
+
+  <p>Preview url: <input type="text" name="song[preview_url]"></p>
+  <p>Artist ID: <input type="text" name="song[artist_id]"></p>
+
+  <input type="submit" value="Create song">
+
+</body>
+</html>
