@@ -54,3 +54,9 @@ post '/songs' do
   @song = Song.create(params[:song])
   redirect "/songs/#{@song.id}"
 end
+
+delete '/songs/:id' do
+  @song = Song.find(params[:id])
+  @song.destroy
+  redirect("/songs")
+end
