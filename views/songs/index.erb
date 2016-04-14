@@ -5,10 +5,15 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>HERE ARE YOUR SONGS!</h1>
+  <h1>Song!</h1>
   <% @songs.each do |song| %>
   <p class="title_of_songs">
-    <%= song.title %> <audio src="<%=song.preview_url%>">
+    <%= song.title %>
+  </p>
+  <p class="song_snippet">
+    <audio src="<%=song.preview_url%>" type="audio/x-m4a" controls >
+      <code> Your browser doesn't support audio tags</code>
+     </audio>
   </p>
   <% end %>
 </body>

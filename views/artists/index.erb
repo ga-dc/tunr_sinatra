@@ -5,7 +5,7 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>HERE ARE YOUR ARTISTS</h1>
+  <h1>Current Artists</h1>
   <% @artists.each do |artist| %>
   <p class="artist">
     <a href="/artists/<%= artist.id %>"><%= artist.name %></a>

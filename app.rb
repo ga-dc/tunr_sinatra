@@ -50,3 +50,21 @@ put '/artists/:id' do
   @artist.update(params[:artist])
   redirect("/artists/#{@artist.id}")
 end
+
+delete '/artists/:id' do
+  @artist = Artist.find(params[:id])
+  @artist.destroy
+  erb(:"artists/edit")
+  redirect("/artists")
+end
+
+get '/artists/:artist_id/song/:id' do
+  @artist = Artist.find(params[:artist_id])
+  @song = @artist.songs.find(params[:id])
+
+  erb(:"songs/show")
+end
+
+# /artists/:artist_id/song/:id
+# params[:artist_id]
+# parmas[:id]

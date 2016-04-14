@@ -1,6 +1,4 @@
-Edit Artist
-
-
+<h1>Edit Artist<h1>
 <form action="/artists/<%= @artist.id %>" method="post">
   <input type="hidden" name="_method" value="put">
 
@@ -11,4 +9,10 @@ Edit Artist
   <input name="artist[nationality]" value="<%= @artist.nationality %>">
 
   <input type="submit" value="Update">
+</form>
+
+<h2>Delete Artist</h2>
+<form action="/artists/<%= @artist.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input class="button-delete" type="submit" value="Delete!">
 </form>
