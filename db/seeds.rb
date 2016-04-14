@@ -28,6 +28,7 @@ song_data.each_pair do |artist_name, songs|
       title:        song[:title],
       album:        song[:album],
       preview_url:  song[:preview_link],
+      #syntactic sugar below using artist: instead of artist_id
       artist:       current_artist
     })
   end
