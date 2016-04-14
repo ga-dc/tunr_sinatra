@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Songs</title>
+</head>
+<body>
+  <h1>List of All Songs</h1>
+  <% @songs.each do |song| %>
+  <p>
+    <audio src= "<%=song.preview_url%>" ></audio>
+    <a href class="songs">
+      <%= '"' + song.title + '"' + " on " + "<i>" + song.album + "</i>" + " by " + Artist.find(song.artist_id).name  %>
+    </a>
+  </p>
+  <% end %>
+</body>
+</html>
