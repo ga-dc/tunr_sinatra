@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>songs</title>
+</head>
+<body>
+  <h1>Songs</h1>
+
+  <% @songs.each do |song| %>
+    <h2 class="songs">
+      <p>
+      <%= song.title + " | " + song.album %>
+    </p>
+  </h2>
+  <% end %>
+</body>
+</html>
