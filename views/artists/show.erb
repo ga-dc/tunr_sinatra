@@ -3,5 +3,6 @@
 <div class="artist">
   <p>Name: <%= @artist.name %></p>
   <p>Nationality: <%= @artist.nationality %></p>
-  <a href='/artists/<%= @artist.id %>/edit'>Edit This Artist</a>
+  <img src="<%= @artist.photo_url %>" alt="artist photos"></img>
+  <p><a href='/artists/<%= @artist.id %>/edit'>Edit This Artist</a></p>
 </div>
