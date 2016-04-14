@@ -15,7 +15,7 @@ require_relative 'models/song'
 get '/' do
   @artists = Artist.all
   @songs = Song.all
-  "Indexy"
+  erb :index
 end
 
 get '/artists/' do
