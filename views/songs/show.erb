@@ -6,12 +6,13 @@
 </head>
 <body>
   <div><img class='album_cover' src='<%= @song.artwork %>'/></div>
-  <h1>SONG: <%= @song.title %>  |  ALBUM: <%= @song.album %></h1>
   <audio src="<%= @song.preview_url %>" type="audio/x-m4a" controls>
     <code> Your browser doesn't support audio tags</code>
   </audio>
-
-
+  <h1>
+    <p>ARTIST: <a href='../artists/<%= @song.artist_id %>'><%= @song.artist.name %></a></p>
+    <p>SONG: <%= @song.title %></p>
+    <p>ALBUM: <%= @song.album %></p></h1>
 
 </body>
 </html>
