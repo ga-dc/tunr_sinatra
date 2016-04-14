@@ -13,6 +13,11 @@
  </a>
  <button><a href="/">     Back       </a></button>
  </p>
-<a href="/artists/<%= @artist.id %>/edit">Edit this artist</a>
+  <a href="/artists/<%= @artist.id %>/edit">Edit this artist</a>
+  <h3>Delete This Artist!!</h3>
+    <form action="/artists/<%= @artist.id %>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <input class="button-delete" type="submit" value="Delete!">
+    </form>
  </body>
 </html>

@@ -36,6 +36,12 @@ post '/artists' do
   redirect "/artists/#{@artist.id}"
 end
 
+delete '/artists/:id' do
+  @song = Artist.find(params[:id])
+  @song.destroy
+  redirect("/artists")
+end
+
 get '/songs' do
   @songs = Song.all
   erb :'/songs/index'
@@ -53,10 +59,4 @@ end
 post '/songs' do
   @song = Song.create(params[:song])
   redirect "/songs/#{@song.id}"
-end
-
-delete '/songs/:id' do
-  @song = Song.find(params[:id])
-  @song.destroy
-  redirect("/songs")
 end
