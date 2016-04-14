@@ -8,11 +8,10 @@
   <h1>Songs</h1>
 
   <% @songs.each do |song| %>
-    <h2 class="songs">
-      <p>
-      <%= song.title + " | " + song.album %>
+    <p>
+      <a href='/songs/<%=song.id%>'><%= song.title %></a> |
+      <%=song.artist.name %>
     </p>
-  </h2>
   <% end %>
 </body>
 </html>

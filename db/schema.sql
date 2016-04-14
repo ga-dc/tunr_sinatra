@@ -13,5 +13,6 @@ CREATE TABLE songs (
   title TEXT NOT NULL,
   album TEXT NOT NULL,
   preview_url TEXT,
+  artwork TEXT,
   artist_id INT
 )

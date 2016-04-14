@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TUN.R | <%= @song.title.upcase %></title>
+</head>
+<body>
+  <div><img class='album_cover' src='<%= @song.artwork %>'/></div>
+  <h1>SONG: <%= @song.title %>  |  ALBUM: <%= @song.album %></h1>
+  <audio src="<%= @song.preview_url %>" type="audio/x-m4a" controls>
+    <code> Your browser doesn't support audio tags</code>
+  </audio>
+
+
+
+</body>
+</html>

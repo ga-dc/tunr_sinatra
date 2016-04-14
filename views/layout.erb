@@ -2,10 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 <body>
-<h1>TUN.R</h1>
-<h2><a href="/artists">All artists</a></h2>
-<%= yield %>
+  <header>TUN.R</header>
+    <div class="button">
+      <input type="button" onclick="location.href='/artists';" value="ALL ARTISTS" />
+      <input type="button" onclick="location.href='/artists/new';" value="CREATE ARTIST" />
+      <input type="button" onclick="location.href='/songs';" value="ALL SONGS" />
+    </div>
+    <div class="content">
+      <%= yield %>
+    </div>
 </body>
 </html>

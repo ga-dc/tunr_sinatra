@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EDIT ARTIST</title>
+</head>
+<body>
+  <div>
+  <form action="/artists/<%= @artist.id %>" method="post">
+    <input type="hidden" name="_method" value="put">
+
+    <p><label for="artist[name]">NAME  </label>
+    <input class="input" name="artist[name]" value="<%= @artist.name %>"><p>
+
+    <p><label for="artist[photo_url]">PHOTO URL  </label>
+    <input class="input" name="artist[photo_url]" value="<%= @artist.photo_url %>"></p>
+
+    <p><label for="artist[nationality]">NATIONALITY  </label>
+    <input class="input" name="artist[nationality]" value="<%= @artist.nationality %>"><p>
+
+    <p><input type="submit" value="UPDATE">
+  <!-- </form> -->
+<form action="/artists/<%= @artist.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input class="button-delete" type="submit" value="DELETE">
+</form>
+
+
+</body>
+</html>
