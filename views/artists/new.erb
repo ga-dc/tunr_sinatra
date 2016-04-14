@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add an artist!</title>
+</head>
+<body>
+  <h1>New artist!</h1>
+  <form action="/artists/new/" method="post">
+
+  <p>Name: <input type="text" name="artist[name]"></p>
+  <p>Link to img url: <input type="text" name="artist[photo_url]"></p>
+  <p>Nationality: <input type="text" name="artist[nationality]"></p>
+
+  <input type="submit" value="Create artist">
+</form>
+</body>
+</html>
