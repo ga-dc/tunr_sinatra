@@ -10,9 +10,8 @@
 
      <p class="artist">
        <a href="/songs/<%= song.id %>" >
-       <img style="height: 90px" src= "<%= song.preview_url %>" alt="artist photo" >
        <%= song.title + " Album: " + song.album %>
-       <%= song.preview_url  %>
+       <% song.preview_url  %>
         </a>
      </p>
    <% end %>
