@@ -12,6 +12,10 @@ require_relative 'db/connection'
 require_relative 'models/artist'
 require_relative 'models/song'
 
+get '/' do
+  erb :index
+end
+
 get '/artists' do
   @artists = Artist.all
   erb :"artists/index"
