@@ -5,6 +5,7 @@ require 'active_record'
 require_relative 'db/connection'
 
 # Load models
+require_relative 'db/connection'
 require_relative 'models/artist'
 require_relative 'models/song'
 
