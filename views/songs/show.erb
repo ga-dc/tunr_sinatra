@@ -5,16 +5,17 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>Songs</h1>
-  <% @songs.each do |song| %>
+
+
   <p class ="songs">
-    <%= song.title %>
+    <%= @song.title %>
   </p>
   <p>
-    <audio src="<%= song.preview_url %>" type="audio/x-m4a" controls>
+    <audio src="<%= @song.preview_url %>" type="audio/x-m4a" controls>
       <code>Your browser doesn't support audio tags</code>
     </audio>
   </p>
-  <% end %>
+
+
 </body>
 </html>
