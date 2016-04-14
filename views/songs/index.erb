@@ -10,12 +10,12 @@
 
      <p class="artist">
        <a href="/songs/<%= song.id %>" >
-       <img style="height: 90px" src= "<%= artist.photo_url %>" alt="artist photo" >
+       <img style="height: 90px" src= "<%= song.preview_url %>" alt="artist photo" >
        <%= song.title + " Album: " + song.album %>
-       <%= song.preview_url + " Artist: " +song_artist_id %>
+       <%= song.preview_url  %>
         </a>
      </p>
    <% end %>
-   <h2><a href="/songs/new">Add an artist!</a></h2>
+   <h2><a href="/songs/new">Add a song!</a></h2>
  </body>
 </html>
