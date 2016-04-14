@@ -6,31 +6,37 @@
 
 </head>
 <body>
-<center>
-  <h1>
-    <a href="/../../artists/" class="artists">Artist:</a>
-    <%= " " + @artist.name %>
-  </h1>
+
+  <center>
+    <h1>
+      <a href="/../../artists/" class="artists">Artist:</a>
+      <%= " " + @artist.name %>
+    </h1>
     <p>
       (<%= @artist.nationality%>)
     </p>
-  <img style="height: 500px" src= "<%= @artist.photo_url %>"  >
+    <p>
+      <a href="../../artists/<%= @artist.id%>/delete">Delete <%=@artist.name%></a>
+      ||
+      <a href="../../artists/<%= @artist.id%>/edit"> Edit <%=@artist.name%></a>
+    </p>
+    <img style="height: 500px" src= "<%= @artist.photo_url %>"  >
+  </center>
+
   <p>
 
-  <% @artist_songs.each do |song| %>
+    <% @artist_songs.each do |song| %>
     <p>
       <a href="/../../songs/<%= song.id %>">
-      <%= '"' + song.title + '" from <i>' + song.album + '</i>' %>
+        <%= '"' + song.title + '" from <i>' + song.album + '</i>' %>
       </a>
       <audio controls>
         <source src = "<%= song.preview_url%>" type="audio/mpeg">
-      </audio>
+        </audio>
+      </p>
+      <% end %>
+
     </p>
-  <% end %>
-  <a href="../../artists/<%= @artist.id%>/delete">Delete <%=@artist.name%></a>
-  ||
-  <a href="../../artists/<%= @artist.id%>/edit"> Edit <%=@artist.name%></a>
- </p>
-</center>
-</body>
-</html>
+
+  </body>
+  </html>
