@@ -14,6 +14,11 @@ require_relative 'db/connection'
 require_relative 'models/artist'
 require_relative 'models/song'
 
+get '/' do
+  @artists = Artist.all
+  erb :"artists/index"
+end
+
 get '/artists' do
   @artists = Artist.all
   erb :"artists/index"
@@ -29,18 +34,30 @@ get '/artists/:id' do
   erb :"artists/show"
 end
 
-get '/' do
-  @name = name
-  erb :index
+get '/artists/:id/edit' do
+  @artist = Artist.find(params[:id])
+  erb :"artists/edit"
 end
-#
-# post '/add_name' do
-#   artists << params[:name]
-#   redirect "/"
-# end
 
 post '/artists' do
   puts params
   @artist = Artist.create(params[:artists])
   redirect "/artists/#{@artist.id}"
+end
+
+get "/artists/:id/edit" do
+  @artists = Artist.find(params[:id])
+  erb(:"artists/edit")
+end
+
+put '/artists/:id' do
+  @artist = Artist.find(params[:id])
+  @artist.update(params[:artist])
+  redirect("/artists/#{@artist.id}")
+end
+
+delete '/artists/:id' do
+  @artist = Artist.find(params[:id])
+  @artist.destroy
+  redirect("/artists")
 end
