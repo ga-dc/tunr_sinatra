@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= @artist.name %></title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="header">
+    <h2>Delete <%= @artist.name %></h2>
+  </div>
+  <div class="form">
+    <form action = "/artists/<%= @artist.id %>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <input class="button-delete" type="submit" value="Are you sure you want to delete <%=@artist.name%>???">
+    </form>
+  </div>
+
+</body>
+</html>

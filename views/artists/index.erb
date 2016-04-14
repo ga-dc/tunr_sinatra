@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Artists</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="header">
+    <h2>Artists</h2>
+  </div>
+  <ul>
+  <% @artists.each do |artist|%>
+  <li><a href="/artists/<%= artist.id %>"><%= artist.name%><br><img src="<%= artist.photo_url %>"></a></li>
+  <% end %>
+</ul>
+<a href="/add_artist">Add an artist?</a>
+</body>
+</html>

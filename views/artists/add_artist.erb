@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add artists</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="header">
+    <h2>Current artists</h2>
+  </div>
+  <% @artists.each do |artist| %>
+  <ul>
+    <li><%= artist.name %></li>
+  </ul>
+  <% end %>
+  <div class="form">
+    <form action = "/add_artist" method="post">
+      <span>Name: </span>
+      <input type="text" name="name"><br>
+      <span>Photo: </span>
+      <input type="text" name="photo_url"><br>
+      <span>Nationality: </span>
+      <input type="text" name="nationality"><br>
+      <input type="submit" value="Add new artist">
+    </form>
+  </div>
+
+</body>
+</html>

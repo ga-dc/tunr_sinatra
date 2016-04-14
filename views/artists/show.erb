@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= @artist.name %></title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="header">
+    <h2><%= @artist.name %></h2>
+  </div>
+  <img src="<%= @artist.photo_url%>">
+  <p>
+    Nationality: <%= @artist.nationality %>
+  </p>
+  <ul>
+    <h3>Albums</h3>
+    <% @albums.each do |album| %>
+    <li><%= album %></li>
+    <% end %>
+  </ul>
+  <a href="/artists/<%=@artist.id%>/edit">Edit info</a>
+  <a href="/artists/<%=@artist.id%>/delete">Delete this artist</a>
+  <a href="/artists">Back to artists</a>
+</body>
+</html>
