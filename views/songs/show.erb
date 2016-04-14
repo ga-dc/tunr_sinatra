@@ -7,12 +7,9 @@
  <body>
    <h1>Hello World - this is songs/show.erb</h1>
  <p>
-   <!-- <img style="height: 300px" src=" <%= @artist.photo_url %>" alt="artist photo" >
-   <a href class="artist">
-
-   <%= @artist.name + " Nationality: " + @artist.nationality %>
- </a> -->
- <button><a href="/">     Back       </a></button>
+   <%= "Title: " + @song.title %>
+   <a href="<%= @song.preview_url %>">Link to Preview</a>
+ <button><a href="/songs">     Back       </a></button>
  </p>
 
  </body>
