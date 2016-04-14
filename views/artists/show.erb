@@ -14,9 +14,9 @@
     Nationality: <%= @artist.nationality %>
   </p>
   <ul>
-    <h3>Albums</h3>
-    <% @albums.each do |album| %>
-    <li><%= album %></li>
+    <h3>Songs</h3>
+    <% @songs.each do |song| %>
+    <li><a href="/songs/<%= song.id %>"><%= song.title %></a></li>
     <% end %>
   </ul>
   <a href="/artists/<%=@artist.id%>/edit">Edit info</a>
