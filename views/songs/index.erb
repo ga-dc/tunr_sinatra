@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="utf-8">
+   <title></title>
+ </head>
+ <body>
+   <h1>Their songs</h1>
+   <% @songs.each do |song| %>
+
+     <p class="artist">
+       <a href="/songs/<%= song.id %>" >
+       <img style="height: 90px" src= "<%= artist.photo_url %>" alt="artist photo" >
+       <%= song.title + " Album: " + song.album %>
+       <%= song.preview_url + " Artist: " +song_artist_id %>
+        </a>
+     </p>
+   <% end %>
+   <h2><a href="/songs/new">Add an artist!</a></h2>
+ </body>
+</html>
