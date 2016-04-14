@@ -1,3 +1,5 @@
+
+
 def get_artist_data
   artist_data = {
     "yeahyeahyeahs" => {

@@ -1,0 +1,7 @@
+<h2>All Songs</h2>
+<p><a href='/' style="font-size:2vw;">Top Menu</a></p>
+
+
+<% @song.each do |song|%>
+<p><a href="/songs/<%=song.id%>"><%= song.title %></a></p>
+<% end %>

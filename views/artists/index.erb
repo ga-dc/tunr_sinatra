@@ -1,0 +1,52 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+      $("button").click(function(){
+        if (this.innerHTML == "Create Artist"){
+          $("form").hide(1000);
+          $("#create").toggle('slow','swing');
+        } else if (this.innerHTML == "Delete Artist") {
+          $("form").hide(1000);
+          $("#delete").toggle('slow','swing');
+        } else {
+          $("form").hide(1000);
+          $("#edit").toggle('slow','swing');}
+      });
+
+  });
+</script>
+
+<h2>All Artists</h2>
+<p><a href='/' style="font-size:2vw;">Top Menu</a></p>
+
+<!--Buttons for selection options  -->
+<button type="button">Create Artist</button>
+<button type="button">Delete Artist</button>
+<button type="button">Edit Artist Info</button>
+
+<!--Forms for all the actions  -->
+<!--Create Form  -->
+<form id = "create" action = '/create' method="post" style="display:none; width:15vw;">
+  <input name='artistName' placeholder="Add Artist Name">
+  <input name='artistPhoto_url' placeholder="Add Photo ULR (optional)">
+  <input name='artistNationality' placeholder="Add Nationality (optional)">
+  <input type="submit" value="Add Artist">
+</form>
+
+<!--Delete Form  -->
+<form id = "delete" action = '/delete' method="post" style="display:none;">
+  <input name='artistName' placeholder="Type in Artist's Name">
+  <input type="submit" value="Delete Artist">
+</form>
+
+<!--Edit Form Part 1 -->
+<form id = "edit" action = '/edit' method="post" style="display:none; width:15vw;">
+  <input name='artistName' placeholder="Artist Name">
+  <input type="submit" value="Edit Artist">
+</form>
+
+
+<% @artist.each do |artist|%>
+  <p></p>
+  <p><a href="/artists/<%=artist.id%>"><%= artist.name %></a></p>
+<% end %>
