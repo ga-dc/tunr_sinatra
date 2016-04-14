@@ -19,7 +19,28 @@ get '/artists' do
   erb :"artists/index"
 end
 
+get '/artists/new' do
+  erb :"artists/new"
+end
+
+
 get '/artists/:id' do
   @artist = Artist.find(params[:id])
   erb :"artists/show"
+end
+
+get '/' do
+  @name = name
+  erb :index
+end
+#
+# post '/add_name' do
+#   artists << params[:name]
+#   redirect "/"
+# end
+
+post '/artists' do
+  puts params
+  @artist = Artist.create(params[:artists])
+  redirect "/artists/#{@artist.id}"
 end
