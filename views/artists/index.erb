@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+  <h1>Hello</h1>
+  <% @artists.each do |artist| %>
+  <h2>Delete Artist</h2>
+
+  <p class="artist">
+    <a href="/artists/<%= artist.id %>" >
+      <img style="height: 10em" src= "<%= artist.photo_url %>" >
+      <%= artist.name + " Nationality: " + artist.nationality %>
+    </p>
+    <% end %>
+    <h2><a href="/artists/new">Add an artist here</a></h2>
+</form>
+  </body>
+  </html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="utf-8">
+   <title><% @song.title %> </title>
+ </head>
+ <body>
+   <h1>view/songs/show.erb</h1>
+ <p>
+   <%= "Title: " + @song.title %>
+
+   <img style="height: 300px" src=" <%= @song.photo_url %>" >
+   <a href="<%= @song.preview_url %>">Link to Preview</a> 
+   <a href class="song">
+   <!-- to be fixed -->
+   <!-- <%= @song.name + " Nationality: " + @song.nationality %> -->
+   <!-- <a href='/artists/<%= @artist.id %>/edit'>Edit This artist</a> -->
+ </a>
+ <button><a href="/songs">Back</a></button>
+ <!-- <button><a href="/">Edit</a></button> -->
+ </p>
+
+ </body>
+</html>
