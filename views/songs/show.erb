@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TUNR</title>
+</head>
+<body>
+  <center>
+    <p>
+      <h1><%= '"' + @song.title + '" from <i>' + @song.album + "</i> by" %>
+        <a href="../../artists/<%= @artist.id %>">
+          <%= @artist.name %>
+        </a>
+      </h1>
+      <img src = "<%= @artist.photo_url %>" style="height: 500px">
+      <p>
+        <audio controls>
+          <source src = "<%= @song.preview_url%>" type="audio/mpeg">
+        </audio>
+      </p>
+    </p>
+  </center>
+
+</body>
+</html>
