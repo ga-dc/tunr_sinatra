@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit <%= @artist.name %>'s information</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="header">
+    <h2>Edit information</h2>
+  </div>
+  <div class="form">
+    <form action = "/artists/<%=@artist.id%>" method="post">
+      <input type="hidden" name="_method" value="put">
+      <span>Name: </span>
+      <input type="text" name="artist[name]" value="<%=@artist.name%>"><br>
+      <span>Photo: </span>
+      <input type="text" name="artist[photo_url]" value="<%=@artist.photo_url%>"><br>
+      <span>Nationality: </span>
+      <input type="text" name="artist[nationality]" value="<%=@artist.nationality%>"><br>
+      <input type="submit" value="Edit <%=@artist.name%>'s info">
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= @song.title %></title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="header">
+    <h2><%= @song.title %></h2>
+  </div>
+  <p>
+    Artist: <%= @artist.name %><br>
+    Album: <%= @song.album %><br>
+    Preview: <audio src="<%= @song.preview_url %>" controls></audio><br>
+  </p>
+  <a href="/songs/<%=@song.id%>/edit">Edit info</a>
+  <a href="/songs/<%=@song.id%>/delete">Delete this song</a>
+  <a href="/songs">Back to songs</a>
+</body>
+</html>

@@ -1,0 +1,35 @@
+* {
+  background-color: #0b1e21;
+  color: #d8fcf1;
+}
+
+.header {
+  margin: 30px;
+  background-color: rgb(0, 0, 0);
+  border: 10px;
+  border-radius: 15px;
+  width: 400px;
+  text-align: center;
+  padding: 5px;
+}
+
+h2 {
+  background-color: rgb(0,0,0)
+}
+
+img {
+  width: 300px;
+  margin-left: 30px;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  margin: 15px;
+}
+
+.form {
+  margin: 15px;
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>All songs</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="header">
+    <h2>Songs</h2>
+  </div>
+  <ul>
+  <% @songs.each do |song|%>
+  <li><a href="/songs/<%= song.id %>"><%= song.title %> -- <%= (@artists.find(song.artist_id)).name %></a></li>
+  <% end %>
+</ul>
+<a href="/songs/add_song">Add a song</a>
+<a href="/artists">Go to artists</a>
+</body>
+</html>

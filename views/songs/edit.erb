@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit <%= @song.title %>'s information</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="header">
+    <h2>Edit information</h2>
+  </div>
+  <div class="form">
+    <form action = "/songs/<%=@song.id%>" method="post">
+      <input type="hidden" name="_method" value="put">
+      <span>Title: </span>
+      <input type="text" name="song[title]" value="<%=@song.title%>"><br>
+      <span>Preview: </span>
+      <input type="text" name="song[preview_url]" value="<%=@song.preview_url%>"><br>
+      <span>Album: </span>
+      <input type="text" name="song[album]" value="<%=@song.album%>"><br>
+      <span>Album: </span>
+      <select name="artist_id">
+        <% @artists.each do |artist| %>
+        <option value=<%=artist.id%>><%= artist.name %></option>
+        <% end %>
+      </select>
+      <input type="submit" value="Edit <%=@song.title%>'s info">
+    </form>
+  </div>
+</body>
+</html>

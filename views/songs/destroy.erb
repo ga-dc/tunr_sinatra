@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= @song.title %></title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="header">
+    <h2>Delete <%= @song.title %></h2>
+  </div>
+  <div class="form">
+    <form action = "/songs/<%= @song.id %>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <input class="button-delete" type="submit" value="Are you sure you want to delete <%=@song.title%>?">
+    </form>
+  </div>
+
+</body>
+</html>

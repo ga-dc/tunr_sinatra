@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add songs</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="header">
+    <h2>Add song</h2>
+  </div>
+  <div class="form">
+    <form action="/songs/add_song" method="post">
+      <span>Title: </span>
+      <input type="text" name="title"><br>
+      <span>Preview url: </span>
+      <input type="text" name="preview_url"><br>
+      <span>Album: </span>
+      <input type="text" name="album"><br>
+      <span>Artist: </span>
+      <select name="artist_id">
+        <% @artists.each do |artist| %>
+        <option value=<%=artist.id%>><%= artist.name %></option>
+        <% end %>
+      </select>
+      <input type="submit" value="Add new song">
+    </form>
+  </div>
+
+</body>
+</html>
