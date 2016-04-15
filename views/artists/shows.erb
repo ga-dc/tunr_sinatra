@@ -1,0 +1,16 @@
+<h1>About the artists</h1>
+ <div class= "artist_info">
+   <p>
+     Artist Name: <%= @artist.name %>
+   </p>
+   <p>
+     Artist Nationality: <%= @artist.nationality %>
+   </p>
+   <a href='/artists/<%= @artist.id %>/edit'>Edit This Artist</a>
+ </div>
+
+ <h2>Songs by this artist!</h2>
+ <div class="songsofartist">
+   <% @artist.songs.each do |song| %>
+   <p><a href="/artists/<%= @artist.id %>/song/<%= song.id %>"><%= song.title %></a></p>
+   <% end %>

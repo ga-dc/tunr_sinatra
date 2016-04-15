@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <title>Document</title>
+ </head>
+ <body>
+   <h1>Songs</h1>
+   <% @songs.each do |song| %>
+   <p class="title_of_songs">
+     <%= song.title %>
+   </p>
+   <p class="song_snippet">
+     <audio src="<%=song.preview_url%>" type="audio/x-m4a" controls >
+       <code> Your browser doesn't support audio tags</code>
+      </audio>
+   </p>
+   <% end %>
+ </body>
+ </html>
