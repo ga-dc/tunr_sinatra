@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="utf-8">
+   <title></title>
+ </head>
+ <body>
+   <h1>Their songs</h1>
+   <% @songs.each do |song| %>
+
+     <p class="artist">
+       <a href="/songs/<%= song.id %>" >
+       <%= song.title + " Album: " + song.album %>
+       <% song.preview_url  %>
+        </a>
+     </p>
+   <% end %>
+   <h2><a href="/songs/new">Add a song!</a></h2>
+ </body>
+</html>

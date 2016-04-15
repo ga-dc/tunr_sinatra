@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="utf-8">
+   <title><% @song.title %> </title>
+ </head>
+ <body>
+   <h1>Hello World - this is views/songs/show.erb</h1>
+ <p>
+   <%= "Title: " + @song.title %>
+   <a href="<%= @song.preview_url %>">Link to Preview</a>
+ </p>
+
+ <button><a href="/songs">     Back       </a></button>
+ </p>
+
+ </body>
+</html>
