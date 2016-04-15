@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Sinatra Tunr</title>
+</head>
+<style>
+p {display: inline-block;}
+</style> 
+
+<body>
+
+<h2>All Songs</h2>
+<% @songs.each do |song|%>
+	<div>
+  <p>Song Title: <%= song.title %></p>  <p>Album: <%= song.album %></p>
+  	</div>
+<% end %>
+
+</body>
+</html>
