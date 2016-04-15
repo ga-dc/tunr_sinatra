@@ -3,7 +3,6 @@ require 'active_record'
 
 ## Connect to the database
 require_relative 'db/connection'
-
 # Load models
 require_relative 'models/artist'
 require_relative 'models/song'

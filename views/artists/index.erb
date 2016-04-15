@@ -8,7 +8,11 @@
   <h1>Peep my artists!!!</h1>
   <% @artists.each do |artist| %>
   <p class="Artist">
-    <a href="/artists/id"<%= artist.name %></a>
+    <img style="height: 90px" src= "<%= artist.photo_url %>" >
+    <%= artist.name + " Nationality: " + artist.nationality %>
+      </p>
+    <% end %>
+    <!-- <a href="/artists/id"<%= artist.name %></a> -->
 
   </p>
   <% end %>
