@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>TUN.R | EDIT/DELETE ARTIST</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 <body>
   <div>
@@ -20,8 +21,8 @@
 
     <p><input type="submit" value="UPDATE">
   <!-- </form> -->
-<form action="/artists/<%= @artist.id %>" method="post">
   <input type="hidden" name="_method" value="delete">
+  <form action="/artists/<%= @artist.id %>" method="post">
   <input class="button-delete" type="submit" value="DELETE">
 </form>
 

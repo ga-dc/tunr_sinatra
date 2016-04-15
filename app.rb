@@ -60,11 +60,17 @@ get '/songs' do
   erb :"songs/index"
 end
 
+get '/songs/new' do
+  @artists = Artist.all
+  erb :"songs/new"
+end
+
+post '/songs' do
+  @song = Song.create(params[:song])
+  redirect "/songs/#{@song.id}"
+end
+
 get '/songs/:id' do
   @song = Song.find(params[:id])
   erb :"songs/show"
 end
-
-# post '/artists' do
-#   @artist = Artist.create(name: params[:name], photo_url: params[:photo_url], nationality: params[:nationality])
-# end

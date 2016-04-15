@@ -53,6 +53,16 @@ form input.input{
   margin-left:3vw;
   font-size:2em;
 }
+select , option{
+    border:0;
+    background:black;
+    color:white;
+    font-size: 1em;
+    height:2em;
+    border:1px solid #d8d8d8;
+    width:10em;
+    -webkit-appearance: none;
+}
 a:link{
   color:black;
   font-family: helvetica;
