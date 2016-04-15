@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <% @artists.each do |artist| %>
+  <p class ="artist">
+    <a href="/artists/<%= artist.id %>"><%= artist.name %></a>
+  </p>
+  <p>
+    <img src ="<%= artist.photo_url%>" height = 300px>
+  </p>
+  <% end %>
+</body>
+</html>

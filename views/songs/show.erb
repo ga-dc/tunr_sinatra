@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+
+  <p class ="songs">
+    <%= @song.title %>
+  </p>
+  <p>
+    <audio src="<%= @song.preview_url %>" type="audio/x-m4a" controls>
+      <code>Your browser doesn't support audio tags</code>
+    </audio>
+  </p>
+
+
+</body>
+</html>
