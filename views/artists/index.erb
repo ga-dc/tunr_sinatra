@@ -1,0 +1,27 @@
+<h2>Tunr</h2>
+<h2><a href="/artists">All Artists</a></h2>
+<h2>New Artist</h2>
+<form action="/artists" method="post" >
+  <input type="hidden" name="_method" value="put">
+  <label>Name:</label>
+  <input name="artists[name]">
+
+  <label>nationality:</label>
+  <input name="artists[nationality]">
+
+  <label>photo_url:</label>
+  <input name="artists[photo_url]">
+
+  <input type="submit" value="Create">
+</form>
+
+<% @artists.each do |artist| %>
+
+<div class="artist">
+  <p>Artist name: <a href="/artists/<%= artist.id %>"><%= artist.name %></a></p>
+  <p>Artist nationality: <a href="/artists/<%= artist.nationality %>"><%=artist.nationality%></a></p>
+  <p>Artist photo_url: <a href="/artists/<%= artist.photo_url %>"><%=artist.photo_url%></a></p>
+</div>
+
+
+<% end %>
