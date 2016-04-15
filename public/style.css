@@ -2,7 +2,7 @@ body{
   background-color: white;
   color:black;
   font-family: helvetica;
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: normal;
   margin-top: 15.5vh;
 }
@@ -10,7 +10,7 @@ h1, label{
   background-color: white;
   color:black;
   font-family: helvetica;
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: normal;
 }
 header{
@@ -31,7 +31,7 @@ input[type="button"]{
   border:2px solid black;
   padding:0.8em;
   font-family:helvetica;
-  font-size:1.5em;
+  font-size:1em;
   margin:1em;
 }
 input[type="submit"]{
@@ -39,7 +39,7 @@ input[type="submit"]{
    color:white;
    border: solid transparent;
    font-family:helvetica;
-   font-size:1.5em;
+   font-size:1em;
    display:in-line;
    margin-right:0.8em;
 }
@@ -51,7 +51,7 @@ form input.input{
 }
 .content{
   margin-left:3vw;
-  font-size:2em;
+  font-size:1.5em;
 }
 select , option{
     border:0;
@@ -59,7 +59,7 @@ select , option{
     color:white;
     font-size: 1em;
     height:2em;
-    border:1px solid #d8d8d8;
+    border:solid transparent;
     width:10em;
     -webkit-appearance: none;
 }
