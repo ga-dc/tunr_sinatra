@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TUN.R | SONGS</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+  <h1>ALL SONGS</h1>
+
+  <% @songs.each do |song| %>
+    <p>
+      <a href='/songs/<%=song.id%>'><%= song.title %></a> |
+      <%=song.artist.name %>
+    </p>
+  <% end %>
+</body>
+</html>

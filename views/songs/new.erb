@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TUN.R | CREATE SONG</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+<form action="/songs" method="post">
+<p><label>TITLE  </label>
+<input class="input" type="text" name="song[title]"></p>
+
+<p><label>PREVIEW URL  </label>
+  <input class="input" type="text" name="song[preview_url]"></p>
+
+<p><label>ALBUM </label>
+<input class="input" type="text" name="song[album]"></p>
+
+<p><label>ARTWORK URL  </label>
+<input class="input" type="text" name="song[artwork]"></p>
+
+<select name="song[artist_id]">
+  <option selected> SELECT ARTIST
+  <% @artists.each do |artist| %>
+  <option value="<%= artist.id %>"><%= artist.name.upcase %></option>
+  <% end %>
+</select>
+
+  <p><input type="submit" value="CREATE"></p>
+</form>
+
+</body>
+</html>

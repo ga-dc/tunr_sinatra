@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TUN.R | <%= @artist.name.upcase %></title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+  <h1><%= @artist.name + " | " + @artist.nationality %></h1>
+  <img src='<%= @artist.photo_url %>'/>
+  <p>
+    <a href='/artists/<%= @artist.id %>/edit'>Edit This Artist</a>
+  </p>
+  <div>
+    <h2>Songs</h2>
+  <% @artist.songs.each do |song| %>
+    <p class="artist">
+      <a href='../songs/<%=song.id%>'><%= song.title %></a> | <%= song.album %>
+    </p>
+  <% end %>
+
+
+  </div>
+
+
+</body>
+</html>

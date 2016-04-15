@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+  <a href="/"><header>TUN.R</header></a>
+    <div class="button">
+      <input type="button" onclick="location.href='/artists';" value="ALL ARTISTS" />
+      <input type="button" onclick="location.href='/artists/new';" value="CREATE ARTIST" />
+      <input type="button" onclick="location.href='/songs';" value="ALL SONGS" />
+      <input type="button" onclick="location.href='/songs/new';" value="CREATE SONG" />
+    </div>
+    <div class="content">
+      <%= yield %>
+    </div>
+</body>
+</html>

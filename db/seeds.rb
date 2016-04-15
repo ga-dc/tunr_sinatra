@@ -28,6 +28,7 @@ song_data.each_pair do |artist_name, songs|
       title:        song[:title],
       album:        song[:album],
       preview_url:  song[:preview_link],
+      artwork: song[:artwork],
       artist:       current_artist
     })
   end

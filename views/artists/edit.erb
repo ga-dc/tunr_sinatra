@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TUN.R | EDIT/DELETE ARTIST</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+  <div>
+  <form action="/artists/<%= @artist.id %>" method="post">
+    <input type="hidden" name="_method" value="put">
+
+    <p><label for="artist[name]">NAME  </label>
+    <input class="input" name="artist[name]" value="<%= @artist.name %>"><p>
+
+    <p><label for="artist[photo_url]">PHOTO URL  </label>
+    <input class="input" name="artist[photo_url]" value="<%= @artist.photo_url %>"></p>
+
+    <p><label for="artist[nationality]">NATIONALITY  </label>
+    <input class="input" name="artist[nationality]" value="<%= @artist.nationality %>"></p>
+
+    <p><input type="submit" value="UPDATE">
+  <!-- </form> -->
+  <input type="hidden" name="_method" value="delete">
+  <form action="/artists/<%= @artist.id %>" method="post">
+  <input class="button-delete" type="submit" value="DELETE">
+</form>
+
+
+</body>
+</html>

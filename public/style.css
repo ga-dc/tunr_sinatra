@@ -1,0 +1,87 @@
+body{
+  background-color: white;
+  color:black;
+  font-family: helvetica;
+  font-size: 1em;
+  font-weight: normal;
+  margin-top: 15.5vh;
+}
+h1, label{
+  background-color: white;
+  color:black;
+  font-family: helvetica;
+  font-size: 1em;
+  font-weight: normal;
+}
+header{
+  position:fixed;
+  width:100vw;
+  height:15vh;
+  top:0;
+  left:0;
+  background-color: rgba(0,0,0,0.8);
+  color:white;
+  font-family: helvetica;
+  font-size: 14vh;
+  text-shadow: 2px 2px black;
+}
+input:focus {outline:0;}
+input[type="button"]{
+  background-color: white;
+  border:2px solid black;
+  padding:0.8em;
+  font-family:helvetica;
+  font-size:1em;
+  margin:1em;
+}
+input[type="submit"]{
+   background-color: black;
+   color:white;
+   border: solid transparent;
+   font-family:helvetica;
+   font-size:1em;
+   display:in-line;
+   margin-right:0.8em;
+}
+form input.input{
+  font-size: 1em;
+  background-color: black;
+  color:white;
+  border: solid transparent;
+}
+.content{
+  margin-left:3vw;
+  font-size:1.5em;
+}
+select , option{
+    border:0;
+    background:black;
+    color:white;
+    font-size: 1em;
+    height:2em;
+    border:solid transparent;
+    width:10em;
+    -webkit-appearance: none;
+}
+a:link{
+  color:black;
+  font-family: helvetica;
+  text-decoration:underline;
+
+}
+a:hover, a:visited:hover{
+  color:red;
+  text-decoration: underline;
+}
+a:visited{
+  text-decoration: underline;
+  color:grey;
+}
+img{
+  height:50%;
+  width:50%;
+}
+img.album_cover{
+  height:180px;
+  width:180px;
+}
