@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Sinatra Tunr</title>
+</head>
+<style>
+p {display: inline-block;}
+</style>
+<body>
+
+<h2>All Artists</h2>
+	<% @artists.each do |artist| %>
+	<div>
+ 	 <p>Artist Name:<%= artist.name %></p><p>Nationality:<%= artist.nationality%></p>
+ 	 </div>
+<% end %>
+
+</body>
+</html>

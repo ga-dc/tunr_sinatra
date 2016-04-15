@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Sinatra Tunr</title>
+</head>
+<body>
+
+<h2>All Songs</h2>
+<% @songs.each do |song|%>
+  <p><%= song.title %></p>
+<% end %>
+
+</body>
+</html>
