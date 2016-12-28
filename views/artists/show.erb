@@ -1,0 +1,27 @@
+<h2><%= @artist.name %></h2>
+
+<div class="artist">
+  <p>
+    <img src="<%= @artist.photo_url %>" />
+
+  <p>Originally from:   <%= @artist.nationality %></p>
+</div>
+
+<div class="artist songs">
+  <h3>Songs by <%= @artist.name %></h3>
+  <% @songs.each do |song|%>
+  <li> <%=song.title %> </li>
+  <% end %>
+</div>
+
+<div class="update edit">
+  <h4><a href="/artists/<%= @artist.id %>/edit">Edit Artist</a></h4>
+</div>
+
+<div class="update delete">
+  <h4>Delete this Artist</h4>
+  <form action="/artists/<%= @artist.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input class="button-delete" type="submit" value="Delete!">
+  </form>
+</div>

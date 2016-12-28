@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Artists</title>
+</head>
+<body>
+  <h2>Artists</h2>
+  <% @artists.each do |artist|%>
+  <p class= "artist">
+    <a href="/artists/<%= artist.id %>"><%= artist.name %></a>
+  </p>
+  <% end %>
+
+  <h4><a href="/artists/new">Add Your Favorite Artist</a></h4>
+
+</body>
+</html>
