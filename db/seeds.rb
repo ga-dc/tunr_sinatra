@@ -5,10 +5,10 @@ require_relative 'connection'
 require_relative '../models/instructor'
 require_relative '../models/student'
 
-jesse = Instructor.create(first_name: "Jesse", last_name: "Shawl", age: 99)
-adrian = Instructor.create(first_name: "Adrian", last_name: "Maseda", age: 100)
-nick = Instructor.create(first_name: "Nick", last_name: "Olds", age: 101)
+jesse = Instructor.create(name: "Jesse Shawl", age: 99)
+adrian = Instructor.create(name: "Adrian Maseda", age: 100)
+nick = Instructor.create(name: "Nick Olds", age: 101)
 
-jesse.students.create(first_name: "Paul", last_name: "Paulson")
-adrian.students.create(first_name: "Bob", last_name: "Bobson")
-nick.students.create(first_name: "Dwayne", last_name: "The Rock Johnson")
+jesse.students.create(name: "Paul Paulson")
+adrian.students.create(name: "Bob Bobson")
+nick.students.create(name: "Dwayne The Rock Johnson")
